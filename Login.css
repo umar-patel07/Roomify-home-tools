@@ -1,0 +1,227 @@
+/* ===== Theme-Matching Login & Signup Page with Animation ===== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.auth-box {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 40px 35px;
+  border-radius: 18px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+  width: 380px;
+  max-width: 95%;
+  text-align: center;
+  color: #333;
+  animation: fadeIn 0.7s ease-in-out;
+  border: 1px solid #eee;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+}
+
+.auth-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.auth-box h2 {
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.brand-accent {
+  color: #ff6b6b;
+}
+
+.auth-box p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form wrapper for animation */
+.form-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-wrapper form {
+  animation: slideFade 0.5s ease;
+}
+
+@keyframes slideFade {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 42px 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.input-group input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0px 0px 6px rgba(255, 107, 107, 0.3);
+  background: #fff;
+}
+
+/* Input Icons */
+.input-group i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #bbb;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.input-group input:focus + i {
+  color: #ff6b6b;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.auth-footer span {
+  color: #ff6b6b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-footer span:hover {
+  color: #d94d4d;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .auth-box h2 {
+    font-size: 24px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+    padding: 10px 38px 10px 12px;
+  }
+
+  .auth-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 30px 20px;
+  }
+
+  .auth-box h2 {
+    font-size: 22px;
+  }
+
+  .input-group input {
+    font-size: 12px;
+    padding: 8px 35px 8px 10px;
+  }
+
+  .auth-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+/* Popup Styling */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(34, 197, 94, 0.9);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  animation: fadeInOut 2s ease forwards;
+  z-index: 999;
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  20% { opacity: 1; transform: translate(-50%, -50%); }
+  80% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -40%); }
+}

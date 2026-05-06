@@ -1,0 +1,131 @@
+.footer {
+  background: #1e1e1e;
+  color: #ddd;
+  padding: 60px 20px 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.footer-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-column p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #ccc;
+  transition: color 0.3s, border-bottom 0.3s;
+  width: fit-content;
+}
+
+.footer-column li:hover {
+  color: #ff7f50;
+  border-bottom: 1px solid #ff7f50;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  font-size: 1.3rem;
+  margin-top: 12px;
+}
+
+.footer-social svg {
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  color: #ccc;
+}
+
+.footer-social svg:hover {
+  transform: scale(1.2);
+  color: #ff7f50;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-column h3, .footer-column h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-column p, .footer-column li {
+    font-size: 0.9rem;
+  }
+
+  .footer-social {
+    gap: 12px;
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,129 @@
+.cart-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.cart-page h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cart-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.checkout-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #e65c00;
+}
+
+.back-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+/* ✅ Responsive Breakpoints */
+
+/* Tablet (below 900px) */
+@media (max-width: 900px) {
+  .cart-item {
+    max-width: 90%;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .cart-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cart-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (below 600px) */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .cart-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cart-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .checkout-btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    margin-top: 20px;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

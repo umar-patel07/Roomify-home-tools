@@ -1,0 +1,125 @@
+.products-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.products-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  justify-items: center;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #27ae60;
+}
+
+.buy-btn {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #e65c00;
+}
+
+.no-products {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 50px;
+}
+
+/* 📱 Responsive Fixes */
+@media (max-width: 1024px) {
+  .products-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-page {
+    padding: 25px;
+  }
+
+  .products-title {
+    font-size: 1.6rem;
+  }
+
+  .product-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-page {
+    padding: 20px 15px;
+  }
+
+  .products-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .buy-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
